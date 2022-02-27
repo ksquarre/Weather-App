@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Poppins&display=swap');
+*{
+    box-sizing: border-box;
+    margin :0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   font-family: 'Poppins', sans-serif;
+  /* background: linear-gradient(rgba(5,7,30,0.4),rgba(5,7,30,0.4)),url(./land.jpg);
+
+   background-position: center;
+   background-size:cover ;
+   background-repeat: no-repeat;
+   */
+   background: linear-gradient(powderblue,cornflowerblue);
+   overflow-x: hidden;
+}
+.cld{
+    position: absolute;
+    width: 160px;
+    height: 76px;
+    border-radius: 100px;
+    background-color: white;
+    
+}
+.cloud1 {
+    top: 7%;
+    right: 2%;
+    animation: toleft 5s infinite linear;
+}
+.cloud2 {
+    bottom: 4%;
+    left: 2%;
+    animation: toright 5s infinite linear;
+}
+.cloud1::before{
+    content: '';
+    position: absolute;
+    width: 48%;
+    height: 103%;
+    top: -60%;
+    left: 12%;
+    border-radius: 50%;
+    background-color: white;
+}
+.cloud1::after{
+    content: '';
+    position: absolute;
+    width: 48%;
+    height: 100%;
+    top: -33%;
+    right: 12%;
+    border-radius: 50%;
+    background-color: white;
+
+}
+.cloud2::before{
+    content: '';
+    position: absolute;
+    width: 48%;
+    height: 103%;
+    top: -60%;
+    left: 12%;
+    border-radius: 50%;
+    background-color: white;
+}
+.cloud2::after{
+    content: '';
+    position: absolute;
+    width: 48%;
+    height: 100%;
+    top: -33%;
+    right: 11%;
+    border-radius: 50%;
+    background-color: white;
+    
+   
+}
+.weather{
+    background: rgba(0,0,0,0.9);
+    width: 100%;
+    height: 480px;
+    max-width: 500px;
+    padding: 2em 1em;
+
+    border-radius: 20px;
+    color: white;
+   
+}
+.search{
+    text-align: center;
+   
+}
+.search input,.search button{
+    display: inline-block;
+}
+.search input{
+    line-height: 2;
+    width: 75%;
+    min-width: 250px;
+    padding: 7px 10px;
+    margin:  10px 5px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background-color: rgba(92, 88, 88,0.7);
+    color: white;
+}
+.error{
+    margin: 10px auto;
+
+    width: 55%;
+    min-width: 250px;
+    margin-left: 35px;
+    padding: 4px;
+    color: white;
+    background-color: rgb(235, 90, 90,0.6);
+    border-radius: 22px;
+    display: none;
+}
+.search button{
+    width: 40px;
+    color: white;
+    font-size: 20px;
+    margin:  10px 5px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition:  all 0.2s;
+    border-radius: 48%;
+    background-color: rgba(92, 88, 88,0.7);
+}
+.search button:hover {
+ 
+    background-color: rgba(92, 88, 88,0.9);
+    transform: scale(1.05);
+}
+
+
+.info{
+    padding: 10px 30px;
+}
+.box{
+    display: flex;
+    
+}
+
+.box img{
+    width: 25px;
+    margin: 0 10px;
+}
+.temp,.description,.humidity,.wind{
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+@media screen and (max-width:580px){
+    .weather{
+        width: 85%;
+        min-width: 280px;
+        height: 420px;
+    }
+    .cld{
+        
+        width: 110px;
+        height: 55px;
+      
+        
+    }
+    .cloud1 {
+        top: 5%;
+        right: 2%;
+        animation: toleft 5s infinite linear;
+    }
+    .cloud2 {
+        bottom: 4%;
+        left: 2%;
+        animation: toright 5s infinite linear;
+    }
+    .search input{
+        line-height: 1.5;
+        width: 80%;
+        min-width: 190px;
+        padding: 7px 11px;
+        margin:  8px 5px;
+        font-size: 15px;
+        
+    }
+    .error{margin: 10px auto;
+        font-size: 15px;
+        width: 62%;
+        min-width: 190px;
+        margin-left: 20px;
+        padding: 4px;
+       
+    }
+    .search button{
+        width: 28px;
+        color: white;
+        font-size: 16px;
+        margin:   5px;
+        padding: 5px;
+       
+    }
+    .box h3{
+        font-size: 22px;
+    }
+    
+.info{
+    padding: 7px 18px;
+}
+
+.box img{
+    width: 18px;
+    margin: 0 7px;
+}
+.temp,.description,.humidity,.wind{
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+
+}
+
+@media screen and (max-width:460px){
+    
+    .weather{
+        width: 90%;
+        min-width: 185px;
+        height: 380px;
+    }
+    .cld{
+        
+        width: 70px;
+        height: 35px;
+      
+        
+    }
+    .search input{
+        line-height: 1.5;
+        width: 78%;
+        min-width: 185px;
+        font-size: 12px;
+        
+        
+    }
+    .error{margin: 10px auto;
+        
+        width: 68%;
+        min-width: 167px;
+        margin-left: 16px;
+        font-size: 10px;
+        
+       
+    }
+    
+    .box h3{
+        font-size: 12px;
+    }
+    .temp,.description,.humidity,.wind{
+        font-size: 10px;
+        text-transform: capitalize;
+        margin: 6px 0;
+    }
+    
+
+}
+
+@keyframes toleft{
+    from{
+        right: 0%;
+        transition: translateX(-100%);
+
+    }
+    to{
+        right: 100%;
+        transition: translateX(0);
+
+    }
+}
+@keyframes toright{
+    from{
+        left: 0%;
+        transition: translateX(0%);
+
+    }
+    to{
+        left: 100%;
+        transition: translateX(100%);
+
+    }
+}
+
